@@ -66,7 +66,7 @@ resource "aws_lb_listener" "backend" {
 resource "aws_route53_record" "public_lb" {
   count   = var.internal ? 0 : 1
   zone_id = "Z074348418GM8R9TERRNQ"
-  name    = var.dns_domain
+  name    = "${var.component}-${var.env}.surendrak.online"
   type    = "CNAME"
   ttl     = 30
   records = [aws_lb.main.dns_name]
