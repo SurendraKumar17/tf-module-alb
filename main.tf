@@ -62,7 +62,8 @@ resource "aws_lb_listener" "backend" {
     }
   }
 }
-#
+
+
 # resource "aws_route53_record" "public_lb" {
 #   count   = var.internal ? 0 : 1
 #   zone_id = "Z074348418GM8R9TERRNQ"
